@@ -1,1 +1,12 @@
-<h1>Hi</h1>
+<!-- Replaced by Routing
+  <app-header (featureSelected)="onNavigate($event)"> -->
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-recipes *ngIf="selectedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="selectedFeature !== 'recipe'"></app-shopping-list> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

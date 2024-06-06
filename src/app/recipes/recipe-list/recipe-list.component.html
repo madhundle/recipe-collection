@@ -1,0 +1,24 @@
+<!-- Create New Recipe -->
+<div class="row">
+    <div class="col-xs-12">
+        <button 
+          routerLink="create"
+          class="btn btn-success">
+          Create New Recipe</button>
+    </div>
+</div>
+
+<hr>
+
+<!-- Instances of a Recipe Name, Description, and Image being displayed -->
+<div class="row">
+    <div class="col-xs-12">
+        <app-recipe-item
+            *ngFor="let recipeItem of recipes; let i = index"
+            [recipe]="recipeItem"
+            [index]="i">
+            <!-- Handled by RecipeService now -->
+            <!-- (recipeSelected)="onRecipeSelected(recipeItem)" -->
+        </app-recipe-item>
+    </div>
+</div>
